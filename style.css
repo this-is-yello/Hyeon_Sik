@@ -22,3 +22,117 @@
     padding: 0;
     font-family: 'GongGothicMedium';
 }
+
+
+h3 {
+    font-family: 'GongGothicBold';
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+.section-text>p {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.ivory-color-text {
+    color: var(--ivory-color);
+}
+.red-color-text {
+    color: var(--red-color);
+}
+.phone {
+    width: 275px;
+    height: 559px;
+    background-image: url(images/Android-MockUp.png);
+    background-repeat: no-repeat; 
+    padding: 22px 0 0 12px;
+    box-sizing: border-box;
+}
+
+/* --------------- main --------------- */
+#main {
+    width: 100%;
+    height: 100vh;
+}
+.main-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 640px;
+    background-color: var(--red-color);
+}
+.main-contents-container {
+    width: 1080px;
+}
+.main-contents-container>h1 {
+    font-family: 'GongGothicBold';
+    color: var(--ivory-color);
+    font-size: 160px;
+    margin-bottom: 24px;
+}
+.main-contents-container>p {
+    color: var(--ivory-color);
+    font-size: 40px;
+}
+
+/* --------------- section-my-level --------------- */
+.my-level {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--red-color);
+}
+.my-level-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+}
+.inner-container {
+    position: relative;
+}
+.inner-container > figure {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+figure.active {
+    opacity: 1;
+}
+.section1-icon {
+    position: absolute;
+    padding-top: 32px;
+    right: 298px;
+    width: 560px;
+}
+.section1-lv {
+    margin-left: 80px;
+    margin-bottom: 32px;
+}
+.section1-my-level {
+    margin-left: 420px;
+    margin-bottom: 24px;
+}
+.section1-lv-check {
+    margin-bottom: 82px;
+}
+.section1-check {
+    margin-left: 457px;
+}
+
+/* --------------- section-cost-performance --------------- */
+.cost-performance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#99001C, #FFFFFF);
+}
+.cost-performance-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+}
