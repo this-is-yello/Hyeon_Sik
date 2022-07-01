@@ -40,6 +40,7 @@ h3 {
     color: var(--red-color);
 }
 .phone {
+    position: relative;
     width: 275px;
     height: 559px;
     background-image: url(images/Android-MockUp.png);
@@ -88,7 +89,6 @@ figure.active {
 
 /* --------------- section-my-level --------------- */
 .my-level {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,8 +103,8 @@ figure.active {
 }
 .section1-icon {
     position: absolute;
-    padding-top: 32px;
-    right: 298px;
+    top: 80px;
+    right: -120px;
     width: 560px;
 }
 .section1-lv {
@@ -124,7 +124,6 @@ figure.active {
 
 /* --------------- section-cost-performance --------------- */
 .cost-performance {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,8 +138,8 @@ figure.active {
 }
 .section2-icon {
     position: absolute;
-    top: 148px;
-    right: 348px;
+    top: -52px;
+    right: -72px;
     width: 433px;
 }
 .section2-search-term {
@@ -168,11 +167,6 @@ figure.active {
     width: 100%;
     height: 100vh;
 }
-.could-not-you-contents {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 .could-not-you-contents>p {
     font-family: 'GongGothicBold';
     font-size: 128px;
@@ -183,4 +177,150 @@ figure.active {
 .could-not-you-contents>p>span {
     font-family: 'GongGothicBold';
     color: var(--red-color);
+}
+.could-text-1 {
+    animation: text-moving-1 infinite 3s;
+}
+@keyframes text-moving-1 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(112px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* --------------- section-find-friends --------------- */
+.find-friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#FFFFFF, #F1E6D0);
+}
+.find-friends-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+}
+.section4-icon {
+    position: absolute;
+    top: -52px;
+    left: -120px;
+    width: 520px;
+}
+.section4-pizza {
+    margin-left: 330px;
+    margin-bottom: 94px;
+}
+.section4-chicken {
+    margin-bottom: 35px;
+}
+.section4-search-party {
+    margin-left: 360px;
+    margin-bottom: 100px;
+}
+.section4-make-party {
+    margin-left: 16px;
+}
+.section4-fork-knife {
+    margin-left: 424px;
+}
+.find-friends-text {
+    text-align: right;
+}
+
+/* --------------- section-high-lv-friends --------------- */
+.high-lv-friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: var(--ivory-color);
+}
+.high-lv-friends-contents {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+}
+.section5-icon {
+    position: absolute;
+    top: -52px;
+    left: -132px;
+    width: 500px;
+}
+.section5-good {
+    margin-left: 400px;
+    margin-bottom: 112px;
+}
+.section5-awesome {
+    margin-bottom: 76px;
+}
+.section5-bad {
+    margin-left: 413px;
+    margin-bottom: 42px;
+}
+.section5-soso {
+    margin-left: 72px;
+}
+
+/* --------------- section-all-screens --------------- */
+.all-screens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --------------- section-all-screens --------------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.footer-contents {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 56%;
+    background-color: var(--ivory-color);
+}
+.footer-contents>figure {
+    padding-bottom: 56px;
+}
+
+/* --------------- fixed --------------- */
+.arrow-down {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+    position: fixed;
+    animation: bounce infinite 2s;
+}
+.arrow-down:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
