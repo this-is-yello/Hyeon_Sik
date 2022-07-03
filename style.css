@@ -110,16 +110,34 @@ figure.active {
 .section1-lv {
     margin-left: 80px;
     margin-bottom: 32px;
+    animation: shake 2.5s infinite;
 }
 .section1-my-level {
     margin-left: 420px;
     margin-bottom: 24px;
+    animation: shake 1.5s infinite;
 }
 .section1-lv-check {
     margin-bottom: 82px;
+    animation: shake 1s infinite;
 }
 .section1-check {
     margin-left: 457px;
+    animation: shake 2s infinite;
+}
+@keyframes shake {
+    from {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(0);
+    }
 }
 
 /* --------------- section-cost-performance --------------- */
@@ -145,19 +163,35 @@ figure.active {
 .section2-search-term {
     margin-left: 220px;
     margin-bottom: 49px;
+    animation: scale 2.5s infinite;
 }
 .section2-￦ {
     margin-bottom: 43px;
+    animation: scale 3.5s infinite;
 }
 .section2-9000 {
     margin-bottom: 82px;
     margin-left: 348px;
+    animation: scale 3s infinite;
 }
 .section2-2000 {
     margin-bottom: 22px;
+    animation: scale 2s infinite;
 }
 .section2-search {
     margin-left: 375px;
+    animation: scale 1.5s infinite;
+}
+@keyframes scale {
+    from {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(116%);
+    }
+    from {
+        transform: scale(100%);
+    }
 }
 
 /* --------------- section-could-not-you --------------- */
@@ -177,20 +211,6 @@ figure.active {
 .could-not-you-contents>p>span {
     font-family: 'GongGothicBold';
     color: var(--red-color);
-}
-.could-text-1 {
-    animation: text-moving-1 infinite 3s;
-}
-@keyframes text-moving-1 {
-    from {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(112px);
-    }
-    to {
-        transform: translateX(0);
-    }
 }
 
 /* --------------- section-find-friends --------------- */
@@ -216,22 +236,38 @@ figure.active {
 .section4-pizza {
     margin-left: 330px;
     margin-bottom: 94px;
+    animation: up-and-down 2.5s infinite;
 }
 .section4-chicken {
     margin-bottom: 35px;
+    animation: up-and-down 3s infinite;
 }
 .section4-search-party {
     margin-left: 360px;
     margin-bottom: 100px;
+    animation: up-and-down 1.5s infinite;
 }
 .section4-make-party {
     margin-left: 16px;
+    animation: up-and-down 2s infinite;
 }
 .section4-fork-knife {
     margin-left: 424px;
+    animation: up-and-down 1s infinite;
 }
 .find-friends-text {
     text-align: right;
+}
+@keyframes up-and-down {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 /* --------------- section-high-lv-friends --------------- */
@@ -257,16 +293,31 @@ figure.active {
 .section5-good {
     margin-left: 400px;
     margin-bottom: 112px;
+    animation: twinkle 2s infinite linear;
 }
 .section5-awesome {
     margin-bottom: 76px;
+    animation: twinkle 3.5s infinite linear;
 }
 .section5-bad {
     margin-left: 413px;
     margin-bottom: 42px;
+    animation: twinkle 2.5s infinite linear;
 }
 .section5-soso {
     margin-left: 72px;
+    animation: twinkle 3s infinite linear;
+}
+@keyframes twinkle {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* --------------- section-all-screens --------------- */
