@@ -111,6 +111,7 @@ figure.active {
     margin-left: 80px;
     margin-bottom: 32px;
     animation: shake 2.5s infinite;
+    transform-origin: 42px;
 }
 .section1-my-level {
     margin-left: 420px;
@@ -120,6 +121,7 @@ figure.active {
 .section1-lv-check {
     margin-bottom: 82px;
     animation: shake 1s infinite;
+    transform-origin: 101px;
 }
 .section1-check {
     margin-left: 457px;
@@ -164,10 +166,12 @@ figure.active {
     margin-left: 220px;
     margin-bottom: 49px;
     animation: scale 2.5s infinite;
+    transform-origin: 65px;
 }
 .section2-￦ {
     margin-bottom: 43px;
     animation: scale 3.5s infinite;
+    transform-origin: 32px;
 }
 .section2-9000 {
     margin-bottom: 82px;
@@ -177,6 +181,7 @@ figure.active {
 .section2-2000 {
     margin-bottom: 22px;
     animation: scale 2s infinite;
+    transform-origin: 57px;
 }
 .section2-search {
     margin-left: 375px;
@@ -193,6 +198,7 @@ figure.active {
         transform: scale(100%);
     }
 }
+
 
 /* --------------- section-could-not-you --------------- */
 .could-not-you {
@@ -255,9 +261,6 @@ figure.active {
     margin-left: 424px;
     animation: up-and-down 1s infinite;
 }
-.find-friends-text {
-    text-align: right;
-}
 @keyframes up-and-down {
     from {
         transform: translateY(0);
@@ -268,6 +271,9 @@ figure.active {
     to {
         transform: translateY(0);
     }
+}
+.find-friends-text {
+    text-align: right;
 }
 
 /* --------------- section-high-lv-friends --------------- */
@@ -313,7 +319,7 @@ figure.active {
         opacity: 1;
     }
     50% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
     to {
         opacity: 1;
@@ -374,4 +380,26 @@ footer {
     to {
         transform: translateY(0);
     }
+}
+
+.side-bar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.side-btn {
+    width: 8px;
+    height: 24px;
+    margin-bottom: 16px;
+    background-color: var(--black-color);
+    opacity: 0.5;
+    border-radius: 12px;
+}
+.side-btn:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
 }
