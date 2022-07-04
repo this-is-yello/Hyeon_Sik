@@ -10,6 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
+body::-webkit-scrollbar {
+    display:none;
+}
 :root {
     --red-color: #99001C;
     --ivory-color: #F1E6D0;
@@ -397,9 +400,12 @@ footer {
     background-color: var(--black-color);
     opacity: 0.5;
     border-radius: 12px;
+    transition: 0.5s;
 }
 .side-btn:hover {
     cursor: pointer;
     opacity: 1;
-    transition: 0.5s;
+}
+.side-btn-opacity {
+    opacity: 1;
 }
