@@ -1,5 +1,4 @@
 onePageScroll();
-downBtn();
 sideBar(false);
 
 function onePageScroll() {
@@ -63,11 +62,6 @@ function onePageScroll() {
       window.scrollTo({top: sections[nextSection].offsetTop, left: 0, behavior: "smooth"});
       sideBar(nextSection);
   });
-  
-}
-
-function downBtn() {
-  
 }
 
 function sideBar(index) {
@@ -104,38 +98,6 @@ function sideBar(index) {
       clearButton();
       sideBtns[Number(index)].classList.add('side-btn-opacity');
     }
-
-    // sections[j].addEventListener("mousewheel", (e) => {
-    //   if(moveCheck){
-    //     moveCheck=false;
-
-    //     console.log(e.wheelDelta)
-    //     clearButton();
-
-    //     try {
-    //       if(e.wheelDelta > 0 ) {
-    //         sideBtns[j-1].classList.add('side-btn-opacity');
-    //       }else{
-    //         sideBtns[j+1].classList.add('side-btn-opacity');
-    //       }
-    //     } catch (error) {
-    //       console.log('oops..!');
-    //     }
-        
-    //     setTimeout(function(){
-    //       moveCheck=true;
-    //     }, 500);
-
-    //     const main = document.getElementById("main");
-    //     const footer = document.getElementsByClassName("footer");
-
-    //     main.addEventListener("mousewheel", (e) => {
-    //       if (e.wheelDelta < 0) {
-    //         sideBtns[0].classList.add('side-btn-opacity');
-    //       }
-    //     })
-    //   }
-    // });
   }
   
   function clearButton(){
@@ -143,4 +105,27 @@ function sideBar(index) {
       sideBtns[k].classList.remove('side-btn-opacity');
     }
   }
+
+  const sectionHeight = sideBar.getBoundingClientRect().height;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > sectionHeight) {
+      sideBar.setAttribute("style", "opacity: 1");
+    } else {
+      sideBar.setAttribute("style", "opacity: 0");
+    }
+  });
+
+  
+  window.addEventListener("scroll", () => {
+    const footer = document.querySelector(".footer");
+    const footerHeight = footer.getBoundingClientRect().height;
+    const allHtml = document.querySelector("html"); 
+    const windowHeight =  allHtml.offsetHeight;
+    const heightHeight = windowHeight - footerHeight;
+
+    if (window.scrollY > heightHeight - 500) {
+      sideBar.setAttribute("style", "opacity: 0");
+    }
+  });
 }

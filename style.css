@@ -73,7 +73,7 @@ figure.active {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 640px;
+    height: 64%;
     background-color: var(--red-color);
 }
 .main-contents-container {
@@ -209,6 +209,7 @@ figure.active {
     align-items: center;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 .could-not-you-contents>p {
     font-family: 'GongGothicBold';
@@ -340,7 +341,7 @@ figure.active {
 }
 
 /* --------------- section-all-screens --------------- */
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -392,6 +393,8 @@ footer {
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: 0.5s;
 }
 .side-btn {
     width: 8px;
@@ -408,4 +411,128 @@ footer {
 }
 .side-btn-opacity {
     opacity: 1;
+}
+
+@media screen and (max-width: 1320px) {
+    h3 {
+        font-size: 56px;
+        margin-bottom: 32px;
+    }
+    .section-text>p {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .phone {
+        width: 245px;
+        height: 498px;
+        background-size: 245px 498px;
+        padding: 19px 0 0 11px;
+    }
+    .inner-container img {
+        width: 222px;
+        height: 465px;
+    }
+
+    .main-contents-container {
+        width: 960px;
+    }
+    .main-contents-container>h1 {
+        font-size: 140px;
+    }
+    .main-contents-container>p {
+        font-size: 32px;
+    }
+    
+    .my-level-contents {
+        width: 960px;
+    }
+    .section1-icon {
+        top: 64px;
+        right: -100px;
+        width: 480px;
+    }
+    .section1-lv {
+        margin-left: 64px;
+    }
+    .section1-lv img {
+        width: 72px;
+    }
+    .section1-my-level {
+        margin-left: 360px;
+    }
+    .section1-my-level img {
+        width: 124px;
+    }
+    .section1-lv-check {
+        margin-bottom: 72px;
+    }
+    .section1-lv-check img {
+        width: 184px;
+    }
+    .section1-check {
+        margin-left: 390px;
+    }
+    .section1-check img {
+        width: 88px;
+    }
+
+    .cost-performance-contents {
+        width: 960px;
+    }
+    .section2-icon {
+        top: -56px;
+        right: -72px;
+        width: 400px;
+    }
+    .section2-search-term {
+        margin-left: 200px;
+    }
+    .section2-search-term img {
+        width: 124px;
+    }
+    .section2-￦ img {
+        width: 56px;
+    }
+    .section2-9000 {
+        margin-left: 320px;
+    }
+    .section2-9000 img {
+        width: 70px;
+    }
+    .section2-2000 img {
+        width: 104px;
+    }
+    .section2-search {
+        margin-left: 340px;
+    }
+    .section2-search img {
+        width: 48px;
+    }
+
+    .find-friends-contents {
+        width: 960px;
+    }
+    .section4-icon {
+        top: -40px;
+        left: -120px;
+        width: 490px;
+    }
+    .section4-pizza {
+        margin-left: 320px;
+    }
+    .section4-chicken img {
+        width: 64px;
+    }
+    .section4-search-party img {
+        width: 116px;
+    }
+    .section4-make-party img {
+        width: 114px;
+    }
+    .section4-fork-knife {
+        margin-left: 400px;
+    }
+    .section4-fork-knife img {
+        width: 56px;
+    }
 }
