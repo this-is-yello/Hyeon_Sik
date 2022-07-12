@@ -62,6 +62,9 @@ h3 {
 figure.active {
     opacity: 1;
 }
+.section-icon img {
+    filter: drop-shadow(12px 12px 4px rgba(30, 30, 30, 50%))
+}
 
 /* --------------- main --------------- */
 #main {
@@ -208,7 +211,7 @@ figure.active {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 300vh;
     overflow: hidden;
 }
 .could-not-you-contents>p {
@@ -217,10 +220,14 @@ figure.active {
     -webkit-text-stroke: 1px var(--red-color);
     color: var(--white-color);
     margin-bottom: 40px;
+    width: 1920px;
 }
 .could-not-you-contents>p>span {
     font-family: 'GongGothicBold';
     color: var(--red-color);
+}
+.could-text-3  {
+    margin-bottom: 0 !important;
 }
 
 /* --------------- section-find-friends --------------- */
@@ -339,6 +346,10 @@ figure.active {
     height: 100vh;
     overflow: hidden;
 }
+.all-screens img {
+    width: 100%;
+    height: 100%;
+}
 
 /* --------------- section-all-screens --------------- */
 .footer {
@@ -358,15 +369,15 @@ figure.active {
     background-color: var(--ivory-color);
 }
 .footer-contents>figure {
-    padding-bottom: 56px;
+    padding-bottom: 64px;
 }
 
 /* --------------- fixed --------------- */
 .arrow-down {
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 24px;
-    position: fixed;
+    bottom: 16px;
     animation: bounce infinite 2s;
 }
 .arrow-down:hover {
@@ -448,8 +459,7 @@ figure.active {
     }
     .section1-icon {
         top: 64px;
-        right: -100px;
-        width: 480px;
+        right: -140px;
     }
     .section1-lv {
         margin-left: 64px;
@@ -458,7 +468,7 @@ figure.active {
         width: 72px;
     }
     .section1-my-level {
-        margin-left: 360px;
+        margin-left: 400px;
     }
     .section1-my-level img {
         width: 124px;
@@ -470,7 +480,7 @@ figure.active {
         width: 184px;
     }
     .section1-check {
-        margin-left: 390px;
+        margin-left: 440px;
     }
     .section1-check img {
         width: 88px;
@@ -480,9 +490,8 @@ figure.active {
         width: 960px;
     }
     .section2-icon {
-        top: -56px;
-        right: -72px;
-        width: 400px;
+        top: -40px;
+        right: -92px;
     }
     .section2-search-term {
         margin-left: 200px;
@@ -494,7 +503,7 @@ figure.active {
         width: 56px;
     }
     .section2-9000 {
-        margin-left: 320px;
+        margin-left: 340px;
     }
     .section2-9000 img {
         width: 70px;
@@ -503,7 +512,7 @@ figure.active {
         width: 104px;
     }
     .section2-search {
-        margin-left: 340px;
+        margin-left: 360px;
     }
     .section2-search img {
         width: 48px;
@@ -515,7 +524,6 @@ figure.active {
     .section4-icon {
         top: -40px;
         left: -120px;
-        width: 490px;
     }
     .section4-pizza {
         margin-left: 320px;
@@ -534,5 +542,198 @@ figure.active {
     }
     .section4-fork-knife img {
         width: 56px;
+    }
+
+    .high-lv-friends-contents {
+        width: 960px;
+    }
+    .section5-icon {
+        top: -44px;
+        left: -150px;
+    }
+    .section5-good {
+        margin-left: 360px;
+    }
+    .section5-good img {
+        width: 40px;
+    }
+    .section5-awesome {
+        margin-left: 20px;
+    }
+    .section5-awesome img {
+        width: 90px;
+    }
+    .section5-bad {
+        margin-left: 420px;
+    }
+    .section5-bad img {
+        width: 64px;
+    }
+    .section5-soso {
+        margin-left: 72px;
+    }
+    .section5-soso img {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h3 {
+        font-size: 48px;
+    }
+    .section-text>p {
+        font-size: 16px;
+    }
+    .phone {
+        width: 220px;
+        height: 448px;
+        background-size: 220px 448px;
+        padding: 17px 0 0 10px;
+    }
+    .inner-container img {
+        width: 200px;
+        height: 418px;
+    }
+
+    .main-contents-container {
+        width: 800px;
+    }
+    .main-contents-container>h1 {
+        font-size: 120px;
+    }
+    .main-contents-container>p {
+        font-size: 28px;
+    }
+    
+    .my-level-contents {
+        width: 800px;
+    }
+    .section1-icon {
+        top: 70px;
+        right: -180px;
+    }
+    .section1-lv img {
+        width: 64px;
+    }
+    .section1-my-level {
+        margin-left: 372px;
+        transform-origin: 32px;
+    }
+    .section1-my-level img {
+        width: 116px;
+    }
+    .section1-lv-check {
+        margin-bottom: 72px;
+    }
+    .section1-lv-check img {
+        width: 164px;
+    }
+    .section1-check {
+        margin-left: 400px;
+        transform-origin: 32px;
+    }
+    .section1-check img {
+        width: 72px;
+    }
+
+    .cost-performance-contents {
+        width: 800px;
+    }
+    .section2-icon {
+        top: -44px;
+        right: -120px;
+    }
+    .section2-search-term {
+        margin-left: 220px;
+    }
+    .section2-search-term img {
+        width: 112px;
+    }
+    .section2-￦ {
+        margin-left: 20px;
+    }
+    .section2-￦ img {
+        width: 48px;
+    }
+    .section2-9000 {
+        margin-left: 316px;
+    }
+    .section2-9000 img {
+        width: 64px;
+    }
+    .section2-2000 img {
+        width: 96px;
+    }
+    .section2-search {
+        margin-left: 324px;
+    }
+    .section2-search img {
+        width: 36px;
+    }
+
+    .find-friends-contents {
+        width: 800px;
+    }
+    .section4-icon {
+        top: -40px;
+        left: -106px;
+    }
+    .section4-pizza {
+        margin-left: 300px;
+    }
+    .section4-chicken img {
+        width: 56px;
+    }
+    .section4-search-party {
+        margin-left: 320px;
+    }
+    .section4-search-party img {
+        width: 106px;
+    }
+    .section4-make-party img {
+        width: 96px;
+    }
+    .section4-fork-knife {
+        margin-left: 360px;
+    }
+    .section4-fork-knife img {
+        width: 48px;
+    }
+
+    .high-lv-friends-contents {
+        width: 800px;
+    }
+    .section5-icon {
+        top: -40px;
+    }
+    .section5-good {
+        margin-left: 340px;
+    }
+    .section5-good img {
+        width: 32px;
+    }
+    .section5-awesome {
+        margin-left: 28px;
+    }
+    .section5-awesome img {
+        width: 80px;
+    }
+    .section5-bad {
+        margin-left: 400px;
+    }
+    .section5-bad img {
+        width: 56px;
+    }
+    .section5-soso {
+        margin-left: 80px;
+    }
+    .section5-soso img {
+        width: 52px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .section-icon {
+        display: none;
     }
 }
