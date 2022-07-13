@@ -1,4 +1,5 @@
 onePageScroll();
+downBtn()
 sideBar(false);
 
 function onePageScroll() {
@@ -53,29 +54,38 @@ function onePageScroll() {
     });
   });
 
-  const downButton = document.querySelector(".arrow-down");
   
+}
+
+function downBtn() {
+  const downButton = document.querySelector(".arrow-down");
+
   const sections = document.getElementsByTagName("section");
   
-    downButton.addEventListener("click", () => {
-      const nextSection = window.scrollY/window.innerHeight;
-      window.scrollTo({top: sections[nextSection].offsetTop, left: 0, behavior: "smooth"});
-      sideBar(nextSection);
+  downButton.addEventListener("click", () => {
+    const nextSection = window.scrollY/window.innerHeight;
+    window.scrollTo({top: window.scrollY + window.innerHeight, left: 0, behavior: "smooth"});
+    sideBar(nextSection);
   });
+  
+  for (let i = 0; i < sections.length; i++) {
+
+  }
 }
+
 
 function sideBar(index) {
   const sections = document.getElementsByTagName("section");
 
   const sideBar = document.querySelector(".side-bar");
 
+  let moveCheck = true;
+
   for (let i = 0; i < sideBar.childElementCount; i++) {
     sideBar.children[i].addEventListener("click", () => {
       window.scrollTo({top: sections[i].offsetTop, behavior: "smooth"});
     });
   }
-
-  let moveCheck = true;
   
   sideBtns = document.querySelectorAll('.side-btn');
   sideBtns[0].classList.add('side-btn-opacity');
