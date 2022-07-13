@@ -1,6 +1,12 @@
+const section3 = document.querySelector(".could-not-you").offsetTop;
+console.log(scrollY); //2889, 4815
+
+
 onePageScroll();
-downBtn()
+downBtn();
 sideBar(false);
+
+console.log(scrollY);
 
 function onePageScroll() {
   const scrolls = document.querySelectorAll(".scroll");
@@ -11,6 +17,7 @@ function onePageScroll() {
 
   scrolls.forEach(function (item, index) {
     item.addEventListener("mousewheel", function (e) {
+      console.log(scrollY);
       e.preventDefault();
       if (moveCheck === true) {
         moveCheck = false;
@@ -53,24 +60,18 @@ function onePageScroll() {
       }
     });
   });
-
-  
 }
+
 
 function downBtn() {
   const downButton = document.querySelector(".arrow-down");
-
-  const sections = document.getElementsByTagName("section");
   
   downButton.addEventListener("click", () => {
-    const nextSection = window.scrollY/window.innerHeight;
     window.scrollTo({top: window.scrollY + window.innerHeight, left: 0, behavior: "smooth"});
+    
+    const nextSection = window.scrollY/window.innerHeight;
     sideBar(nextSection);
   });
-  
-  for (let i = 0; i < sections.length; i++) {
-
-  }
 }
 
 
@@ -128,7 +129,7 @@ function sideBar(index) {
 
   
   window.addEventListener("scroll", () => {
-    const footer = document.querySelector(".footer");
+    const footer = document.querySelector("footer");
     const footerHeight = footer.getBoundingClientRect().height;
     const allHtml = document.querySelector("html"); 
     const windowHeight =  allHtml.offsetHeight;

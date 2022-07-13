@@ -10,9 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display:none;
-}
+} */
 :root {
     --red-color: #99001C;
     --ivory-color: #F1E6D0;
@@ -56,11 +56,21 @@ h3 {
 }
 .inner-container > figure {
     position: absolute;
-    opacity: 0;
-    transition: 1s;
 }
 figure.active {
-    opacity: 1;
+    opacity: 0;
+    animation: phone-slide 6s infinite;
+}
+@keyframes phone-slide {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .section-icon img {
     filter: drop-shadow(12px 12px 4px rgba(30, 30, 30, 50%))
@@ -231,9 +241,6 @@ figure.active {
 }
 .could-text-3  {
     margin-bottom: 0 !important;
-}
-.empty {
-    height: 100vh;
 }
 
 /* --------------- section-find-friends --------------- */
