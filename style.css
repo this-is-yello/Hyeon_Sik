@@ -10,9 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display:none;
-} */
+}
 :root {
     --red-color: #99001C;
     --ivory-color: #F1E6D0;
@@ -359,9 +359,13 @@ figure.active {
     height: 100vh;
     overflow: hidden;
 }
-.all-screens img {
+.all-screens-contents {
     width: 100%;
     height: 100%;
+    background-image: url(images/section6-screen.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 /* --------------- section-all-screens --------------- */
@@ -408,6 +412,9 @@ footer {
     to {
         transform: translateY(0);
     }
+}
+.arrow-down-opacity {
+    opacity: 0;
 }
 
 .side-bar {
@@ -748,5 +755,98 @@ footer {
 @media screen and (max-width: 1080px) {
     .section-icon {
         display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    h3 {
+        font-size: 48px;
+    }
+    .section-text>p {
+        font-size: 16px;
+    }
+    .phone {
+        width: 184px;
+        height: 374px;
+        background-size: 184px 374px;
+        padding: 14px 0 0 8px;
+    }
+    .inner-container img {
+        width: 167px;
+        height: 348px;
+    }
+
+    .main-contents-container {
+        width: 640px;
+    }
+    .my-level-contents {
+        width: 640px;
+    }
+    .cost-performance-contents {
+        width: 640px;
+    }
+    .find-friends-contents {
+        width: 640px;
+    }
+    .high-lv-friends-contents {
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    h3 {
+        font-size: 32px;
+    }
+    .section-text {
+        margin-bottom: 16px;
+    }
+    .section-text>p {
+        font-size: 12px;
+    }
+
+    .main-contents {
+        height: 100vh;
+    }
+    .main-contents-container {
+        width: 340px;
+    }
+    .main-contents-container>h1 {
+        font-size: 80px;
+    }
+    .main-contents-container>p {
+        font-size: 20px;
+    }
+
+    .my-level-contents {
+        flex-direction: column;
+        align-items: center;
+        width: 340px;
+    }
+    .cost-performance-contents {
+        flex-direction: column;
+        align-items: center;
+        width: 340px;
+    }
+    .find-friends-contents {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 340px;
+    }
+    .high-lv-friends-contents {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 340px;
+    }
+
+    .all-screens-contents {
+        background-image: url(images/section6-screen-s.png);
+    }
+
+    .footer-contents {
+        align-items: center;
+        height: 100%;
+    }
+    .footer-contents>figure {
+        padding-bottom: 0px;
     }
 }
