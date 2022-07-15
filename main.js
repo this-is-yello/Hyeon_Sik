@@ -1,12 +1,7 @@
-const section3 = document.querySelector(".could-not-you").offsetTop;
-console.log(scrollY); //2889, 4815
-
-
 onePageScroll();
 downBtn();
 sideBar(false);
 
-console.log(scrollY);
 
 function onePageScroll() {
   const scrolls = document.querySelectorAll(".scroll");
@@ -17,8 +12,6 @@ function onePageScroll() {
 
   scrolls.forEach(function (item, index) {
     item.addEventListener("mousewheel", function (e) {
-      console.log(scrollY);
-      // downBtnOpacity();
       e.preventDefault();
       if (moveCheck === true) {
         moveCheck = false;
@@ -58,7 +51,7 @@ function onePageScroll() {
           moveCheck = true;
         }, 500);
         window.scrollTo({top: moveTop, left: 0, behavior: "smooth"});
-      }find-friends
+      }
     });
   });
 }
@@ -73,19 +66,6 @@ function downBtn() {
     const nextSection = window.scrollY/window.innerHeight;
     sideBar(nextSection);
   });
-  downBtnOpacity()
-}
-
-
-function downBtnOpacity() {
-  const section3Top = document.querySelector(".could-not-you").offsetTop;
-  const section3Bottom = document.querySelector(".find-friends").offsetTop;
-
-  if (window.scrollY > section3Top || window.scrollY < section3Bottom) {
-    downButton.classList.add('arrow-down-opacity');
-  } else {
-    downButton.classList.remove('arrow-down-opacity');
-  }
 }
 
 
@@ -140,6 +120,10 @@ function sideBar(index) {
       sideBar.setAttribute("style", "opacity: 0");
     }
   });
+
+
+  const couldNotU = document.querySelector(".could-not-you-contents");
+  
 
   
   window.addEventListener("scroll", () => {

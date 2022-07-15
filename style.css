@@ -221,25 +221,36 @@ figure.active {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 300vh;
+    height: 100vh;
     overflow: hidden;
-}
-.could-not-you-contents {
-    /* position: fixed; */
 }
 .could-not-you-contents>p {
     font-family: 'GongGothicBold';
-    font-size: 128px;
+    font-size: 8vw;
     -webkit-text-stroke: 1px var(--red-color);
     color: var(--white-color);
     margin-bottom: 40px;
-    width: 1920px;
+    width: 2280px;
 }
 .could-not-you-contents>p>span {
     font-family: 'GongGothicBold';
     color: var(--red-color);
 }
+.could-not-you-contents>p:hover {
+    cursor: default;
+    color: var(--red-color)
+}
+.could-not-you-contents>p:hover>span {
+    color: var(--white-color);
+}
+.could-text-1 {
+    /* transform: translateX(100vw); */
+}
+.could-text-2 {
+    /* transform: translateX(-110vw); */
+}
 .could-text-3  {
+    /* transform: translateX(100vw); */
     margin-bottom: 0 !important;
 }
 
@@ -414,7 +425,7 @@ footer {
     }
 }
 .arrow-down-opacity {
-    opacity: 0;
+    display: none;
 }
 
 .side-bar {
