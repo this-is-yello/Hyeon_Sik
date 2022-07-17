@@ -121,17 +121,10 @@ function sideBar(index) {
     }
   });
 
-
-  const couldNotU = document.querySelector(".could-not-you-contents");
-  
-
-  
   window.addEventListener("scroll", () => {
-    const footer = document.querySelector("footer");
-    const footerHeight = footer.getBoundingClientRect().height;
     const allHtml = document.querySelector("html"); 
     const windowHeight =  allHtml.offsetHeight;
-    const heightHeight = windowHeight - footerHeight;
+    const heightHeight = windowHeight - sectionHeight;
 
     if (window.scrollY > heightHeight - 500) {
       sideBar.setAttribute("style", "opacity: 0");

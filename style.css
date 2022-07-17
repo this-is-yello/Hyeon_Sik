@@ -224,34 +224,103 @@ figure.active {
     height: 100vh;
     overflow: hidden;
 }
-.could-not-you-contents>p {
+.inner-text {
     font-family: 'GongGothicBold';
     font-size: 8vw;
     -webkit-text-stroke: 1px var(--red-color);
     color: var(--white-color);
     margin-bottom: 4vw;
-    width: 2280px;
 }
-.could-not-you-contents>p>span {
+.inner-text>span {
     font-family: 'GongGothicBold';
     color: var(--red-color);
 }
-.could-not-you-contents>p:hover {
+.inner-text:hover {
     cursor: default;
     color: var(--red-color)
 }
-.could-not-you-contents>p:hover>span {
+.inner-text:hover>span {
     color: var(--white-color);
 }
-.could-text-1 {
-    /* transform: translateX(100vw); */
+.could-text {
+    display: flex;
 }
-.could-text-2 {
-    /* transform: translateX(-110vw); */
+.could-text-1 .inner-text-1 {
+    animation: to-left-1 25s linear infinite;
 }
-.could-text-3  {
-    /* transform: translateX(100vw); */
+.could-text-1 .inner-text-2 {
+    animation: to-left-2 50s linear infinite;
+}
+.could-text-2 .inner-text-1 {
+    animation: to-right-1 45s linear infinite;
+}
+.could-text-2 .inner-text-2 {
+    animation: to-right-2 90s linear infinite;
+}
+.could-text-3 .inner-text-1 {
+    animation: to-left-1 50s linear infinite;
+}
+.could-text-3 .inner-text-2 {
+    animation: to-left-2 100s linear infinite;
+}
+.could-text-3>p  {
     margin-bottom: 0 !important;
+}
+@keyframes to-left-1 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01% {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes to-left-2 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    50.01% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+@keyframes to-right-1 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    50.01% {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes to-right-2 {
+    from {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    50.01% {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 /* --------------- section-find-friends --------------- */
@@ -368,14 +437,13 @@ figure.active {
     align-items: center;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 .all-screens-contents {
     width: 100%;
     height: 100%;
     background-image: url(images/section6-screen.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100vh;
     background-position: center;
 }
 
@@ -817,15 +885,16 @@ footer {
 
     .main-contents {
         height: 100vh;
+        align-items: center;
     }
     .main-contents-container {
-        width: 340px;
+        width: 280px;
     }
     .main-contents-container>h1 {
         font-size: 80px;
     }
     .main-contents-container>p {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .my-level-contents {
