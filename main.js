@@ -66,6 +66,19 @@ function downBtn() {
     const nextSection = window.scrollY/window.innerHeight;
     sideBar(nextSection);
   });
+
+  window.addEventListener("scroll", () => {
+    const arrowHeight = downButton.offsetHeight;
+
+    let htmlHeight = document.querySelector("html").offsetHeight;
+    let heightHeight = htmlHeight - arrowHeight - 1000;
+
+    if (window.scrollY >= heightHeight) {
+      downButton.setAttribute("style", "opacity: 0");
+    } else {
+      downButton.setAttribute("style", "opacity: 1");
+    }
+  });
 }
 
 
@@ -111,7 +124,8 @@ function sideBar(index) {
     }
   }
 
-  const sectionHeight = sideBar.getBoundingClientRect().height;
+
+  let sectionHeight = sideBar.getBoundingClientRect().height;
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > sectionHeight) {
@@ -122,11 +136,10 @@ function sideBar(index) {
   });
 
   window.addEventListener("scroll", () => {
-    const allHtml = document.querySelector("html"); 
-    const windowHeight =  allHtml.offsetHeight;
-    const heightHeight = windowHeight - sectionHeight;
+    const htmlHeight = document.querySelector("html").offsetHeight; 
+    const heightHeight = htmlHeight - sectionHeight - 1000;
 
-    if (window.scrollY > heightHeight - 500) {
+    if (window.scrollY > heightHeight) {
       sideBar.setAttribute("style", "opacity: 0");
     }
   });

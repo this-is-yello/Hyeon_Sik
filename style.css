@@ -80,28 +80,67 @@ figure.active {
 #main {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 .main-contents {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 64%;
+    height: 600px;
     background-color: var(--red-color);
 }
 .main-contents-container {
+    display: flex;
+    justify-content: space-between;
     width: 1080px;
 }
-.main-contents-container>h1 {
+.main-text {
+    display: flex;
+    flex-direction: column;
+}
+.main-text>h1 {
     font-family: 'GongGothicBold';
     color: var(--ivory-color);
     font-size: 160px;
-    margin-bottom: 24px;
 }
-.main-contents-container>p {
+.main-text>p {
     color: var(--ivory-color);
     font-size: 40px;
 }
+/* .slide-1 {
+    animation: down-1 20s linear infinite;
+}
+.slide-2 {
+    animation: down-2 40s linear infinite;
+}
+@keyframes down-1 {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(200%);
+    }
+    50.01% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200%);
+    }
+}
+@keyframes down-2 {
+    from {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01% {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+} */
 
 /* --------------- section-my-level --------------- */
 .my-level {
@@ -246,22 +285,22 @@ figure.active {
     display: flex;
 }
 .could-text-1 .inner-text-1 {
-    animation: to-left-1 25s linear infinite;
+    animation: to-left-1 20s linear infinite;
 }
 .could-text-1 .inner-text-2 {
-    animation: to-left-2 50s linear infinite;
+    animation: to-left-2 40s linear infinite;
 }
 .could-text-2 .inner-text-1 {
-    animation: to-right-1 45s linear infinite;
+    animation: to-right-1 50s linear infinite;
 }
 .could-text-2 .inner-text-2 {
-    animation: to-right-2 90s linear infinite;
+    animation: to-right-2 100s linear infinite;
 }
 .could-text-3 .inner-text-1 {
-    animation: to-left-1 50s linear infinite;
+    animation: to-left-1 40s linear infinite;
 }
 .could-text-3 .inner-text-2 {
-    animation: to-left-2 100s linear infinite;
+    animation: to-left-2 80s linear infinite;
 }
 .could-text-3>p  {
     margin-bottom: 0 !important;
@@ -443,29 +482,27 @@ figure.active {
     height: 100%;
     background-image: url(images/section6-screen.png);
     background-repeat: no-repeat;
-    background-size: 100% 100vh;
+    background-size: 100%;
     background-position: center;
 }
 
 /* --------------- section-all-screens --------------- */
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
     width: 100%;
     height: 100vh;
 }
 .footer-contents {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
-    height: 56%;
+    height: 100vh;
     background-color: var(--ivory-color);
 }
-.footer-contents>figure {
-    padding-bottom: 64px;
+.footer-contents>p {
+    color: var(--red-color);
+    padding-top: 160px;
 }
 
 /* --------------- fixed --------------- */
@@ -475,6 +512,7 @@ footer {
     transform: translateX(-50%);
     bottom: 16px;
     animation: bounce infinite 2s;
+    transition: 0.2s;
 }
 .arrow-down:hover {
     cursor: pointer;
@@ -546,10 +584,10 @@ footer {
     .main-contents-container {
         width: 960px;
     }
-    .main-contents-container>h1 {
+    .main-text>h1 {
         font-size: 140px;
     }
-    .main-contents-container>p {
+    .main-text>p {
         font-size: 32px;
     }
     
@@ -697,10 +735,10 @@ footer {
     .main-contents-container {
         width: 800px;
     }
-    .main-contents-container>h1 {
+    .main-text>h1 {
         font-size: 120px;
     }
-    .main-contents-container>p {
+    .main-text>p {
         font-size: 28px;
     }
     
@@ -890,10 +928,10 @@ footer {
     .main-contents-container {
         width: 280px;
     }
-    .main-contents-container>h1 {
+    .main-text>h1 {
         font-size: 80px;
     }
-    .main-contents-container>p {
+    .main-text>p {
         font-size: 16px;
     }
 
@@ -929,4 +967,8 @@ footer {
     .footer-contents>figure {
         padding-bottom: 0px;
     }
+    .footer-contents>p {
+        font-size: 14px;
+    }
+    
 }
